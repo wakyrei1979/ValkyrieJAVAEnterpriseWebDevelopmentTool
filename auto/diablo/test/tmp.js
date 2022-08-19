@@ -1,0 +1,1 @@
+toast(Math.abs(-1));
