@@ -9,11 +9,10 @@ import java.util.stream.Collectors;
 public class Set相关 {
 
     public static void main(String[] args) {
-        ArrayList<DictData> sysDictData = Lists.newArrayList();
-        Set<String> collect = sysDictData.stream().map(v -> v.getDictValue()).collect(Collectors.toSet());
-        if (collect.contains("1017")) {
-
-        }
+        Set<String> collect = Lists.newArrayList(new DictData()).stream()
+                .map(DictData::getDictValue)
+                .collect(Collectors.toSet());
+        System.out.println(collect.contains("1017"));
     }
 
     private static class DictData {
