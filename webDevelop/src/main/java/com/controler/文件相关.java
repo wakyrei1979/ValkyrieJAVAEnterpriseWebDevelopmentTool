@@ -1,10 +1,13 @@
 package com.controler;
 
+import cn.hutool.core.io.IoUtil;
 import java.io.InputStream;
+import javax.servlet.http.HttpServletResponse;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.web.bind.annotation.GetMapping;
 
 public class 文件相关 {
     @GetMapping("/downloadTemplate")
-    @ApiOperation(value = "下载折让总表导入表Excel模板", notes = "下载折让总表导入表Excel模板")
     public void downloadTemplate(HttpServletResponse response) {
         try {
             response.setContentType("application/vnd.ms-excel");
@@ -14,7 +17,6 @@ public class 文件相关 {
             InputStream in = resource.getInputStream();
             IoUtil.copy(in, response.getOutputStream());
         } catch (Exception e) {
-            throw new ModuleRebateException("800001");
         }
     }
 }
