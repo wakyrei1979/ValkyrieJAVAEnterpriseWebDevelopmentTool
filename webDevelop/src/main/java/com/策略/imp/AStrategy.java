@@ -1,12 +1,12 @@
-package com.策略.confirmData.imp;
+package com.策略.imp;
 
 
-import com.策略.confirmData.IConfirmDataStrategy;
+import com.策略.IStrategy;
 import java.util.List;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BusinessExpensesConfirmDataStrategy implements IConfirmDataStrategy {
+public class AStrategy implements IStrategy {
 
     @Override
     public PageInfoWithSum<?> queryDetailByPage(Long id, Integer pageNum, Integer pageSize) {

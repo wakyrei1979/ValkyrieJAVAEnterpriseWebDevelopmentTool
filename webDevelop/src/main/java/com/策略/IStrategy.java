@@ -1,9 +1,9 @@
-package com.策略.confirmData;
+package com.策略;
 
 
 import java.util.List;
 
-public interface IConfirmDataStrategy {
+public interface IStrategy {
 
     PageInfoWithSum<?> queryDetailByPage(Long id, Integer pageNum, Integer pageSize);
 
