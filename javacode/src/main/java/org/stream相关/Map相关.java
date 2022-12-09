@@ -39,6 +39,11 @@ public class Map相关 {
                 .collect(Collectors.groupingBy(Apple::getColor,
                         Collectors.reducing(BigDecimal.ZERO, Apple::getPrice, BigDecimal::add)));
 
+        //分组求和
+        Map<Integer, BigDecimal> collect31 = Lists.newArrayList(new Apple()).stream()
+                .collect(Collectors.groupingBy(Apple::getColor,
+                        Collectors.reducing(BigDecimal.ZERO, Apple::getPrice, BigDecimal::add)));
+
         //分组最大值
         Map<Integer, Optional<Apple>> collect4 = Lists.newArrayList(new Apple()).stream()
                 .collect(Collectors.groupingBy(Apple::getColor,
@@ -52,6 +57,7 @@ public class Map相关 {
                                         .collect(Collectors.toMap(Entry::getKey, e -> e.getValue().get().getPrice()))
                         )
                 );
+
     }
 
 

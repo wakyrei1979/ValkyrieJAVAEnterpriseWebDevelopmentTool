@@ -1,5 +1,6 @@
 package org.stream相关;
 
+import com.sun.xml.internal.messaging.saaj.util.SAAJUtil;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -11,13 +12,13 @@ import java.util.stream.IntStream;
 
 public class 数值大小排序 {
     public static void main(String[] args) {
-        List<A> numbers = Arrays.asList(new A(1,2), new A(2,3), new A(3,4));
+        List<A> numbers = Arrays.asList(new A(3,2), new A(1,3), new A(2,4));
         List<Integer> nums = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
 //        求和
-        BigDecimal unitPre = numbers
-                .stream()
-                .map(A::getB)
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
+//        BigDecimal unitPre = numbers
+//                .stream()
+//                .map(A::getB)
+//                .reduce(BigDecimal.ZERO, BigDecimal::add);
 
 //        最大值
         A a = numbers.stream().max(Comparator.comparing(A::getI)).get();
@@ -45,6 +46,15 @@ public class 数值大小排序 {
         System.out.println("列表中最小的数 : " + stats.getMin());
         System.out.println("所有数之和 : " + stats.getSum());
         System.out.println("平均数 : " + stats.getAverage());
+
+
+
+//        排序再排序
+        List<A> collect2 = numbers.stream()
+                .sorted(Comparator
+                        .comparing(A::getI))
+                .collect(Collectors.toList());
+        System.out.println();
     }
 
     static class A {
