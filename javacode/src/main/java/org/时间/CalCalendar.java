@@ -18,7 +18,7 @@ public class CalCalendar {
 //上个月最后一天
         Calendar calEnd = Calendar.getInstance();
         calEnd.add(Calendar.MONTH, -1);
-        calEnd.set(Calendar.DATE, calEnd.getActualMaximum(Calendar.DATE));
+        calEnd.set(Calendar.DATE, calEnd.getActualMaximum(Calendar.DAY_OF_MONTH));
         calEnd.set(Calendar.HOUR_OF_DAY, 23);
         calEnd.set(Calendar.MINUTE, 59);
         calEnd.set(Calendar.SECOND, 59);
