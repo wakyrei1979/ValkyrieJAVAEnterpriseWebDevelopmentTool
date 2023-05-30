@@ -30,5 +30,14 @@ public class CalCalendar {
         calendar.set(Calendar.YEAR, 2020);
         calendar.roll(Calendar.DAY_OF_YEAR, -1);
         System.out.println(calendar.getTime());
+
+        //新铺底货-没有同步数据
+        calendar.set(Calendar.YEAR,2023);
+        calendar.set(Calendar.MONTH,12-1);
+        calendar.set(Calendar.DATE, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 59);
+        calendar.set(Calendar.SECOND, 59);
+        System.out.println(calendar.getTime());
     }
 }

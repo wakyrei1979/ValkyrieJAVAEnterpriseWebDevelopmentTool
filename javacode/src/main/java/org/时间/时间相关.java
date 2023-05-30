@@ -53,5 +53,8 @@ public class 时间相关 {
         LocalDateTime min = LocalDateTime.of(LocalDate.now(), LocalTime.MIN);
         //to Date
         Date date = Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
+//        自定义写死一个时间
+        Date maxBottledTime = new Date(2023-1900,11,31,0,0,0);
+        System.out.println(maxBottledTime);
     }
 }
