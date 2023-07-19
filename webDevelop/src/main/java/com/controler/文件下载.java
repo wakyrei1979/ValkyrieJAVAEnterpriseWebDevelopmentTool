@@ -7,11 +7,10 @@ import com.策略.factory.StrategyFactory;
 import java.io.InputStream;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.GetMapping;
 
-public class 文件相关 {
+public class 文件下载 {
     @Resource
     public StrategyFactory strategyFactory;
     @GetMapping("/downloadTemplate")
