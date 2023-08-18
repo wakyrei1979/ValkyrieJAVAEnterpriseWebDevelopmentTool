@@ -1,0 +1,51 @@
+{
+  "in180ViewList": [
+    {
+      "useRebateAmount": 0,
+      "ableRebateAmount": 300.0,
+      "moduleCode": "KM03",
+      "moduleName": "OTC",
+      "secondCrmCode": null,
+      "secondCrmName": null,
+      "rebateBelongToDateStr": "2023-01",
+      "checkOrNo": null
+    }
+  ],
+  "snapShot": {
+    "detailList": [
+      {
+        "rebateId": 1348880112669808209,
+        "useAmount": 100.0,
+        "secondLevelReceivingEnterpriseName": "安化县医药总公司",
+        "secondLevelReceivingEnterpriseCode": "1-5CC0ZN",
+        "isOverdue": false,
+        "remainingAmount": 100.0,
+        "occupiedAmount": 0.0,
+        "rebateBelongToDate": 1682870400000,
+        "rebateBelongToDateStr": "2023-05",
+        "moduleCode": "KM02",
+        "moduleName": "医疗"
+      },
+      {
+        "rebateId": 1348880112669808209,
+        "useAmount": 100.0,
+        "secondLevelReceivingEnterpriseName": "安化县医药总公司",
+        "secondLevelReceivingEnterpriseCode": "1-5CC0ZN",
+        "isOverdue": false,
+        "remainingAmount": 100.0,
+        "occupiedAmount": 0.0,
+        "rebateBelongToDate": 1682870400000,
+        "rebateBelongToDateStr": "2023-05",
+        "moduleCode": "KM03",
+        "moduleName": "商销"
+      }
+    ]
+  },
+  "sumAmountIn180": 4200.0,
+  "sumAmountOver180": 0,
+  "sumAmountAll": 4200.0,
+  "useAmountIn180": 300.0,
+  "useAmountOver180": 0,
+  "useAmountAll": 300.0,
+  "assignOver": "1"
+}
